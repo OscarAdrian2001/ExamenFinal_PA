@@ -1,0 +1,24 @@
+// Oscar Dominguez
+// Servicio para consumir api rest en Node.js
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class TareaService {
+
+  private apiUrl = 'http://localhost:3000/api/tareas';
+
+  constructor(private http: HttpClient) {}
+
+  obtenerTareas(): Observable<any> {
+    return this.http.get(this.apiUrl);
+  }
+
+  registrarTarea(tarea: any): Observable<any> {
+    return this.http.post(this.apiUrl, tarea);
+  }
+}

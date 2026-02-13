@@ -1,0 +1,33 @@
+<h2>Registro de Tarea</h2>
+
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+
+  <input placeholder="Título" formControlName="titulo">
+  <br><br>
+
+  <input placeholder="Descripción" formControlName="descripcion">
+  <br><br>
+
+  <input type="date" formControlName="fechaLimite">
+  <br><br>
+
+  <select formControlName="prioridad">
+    <option value="">Seleccione prioridad</option>
+    <option>Alta</option>
+    <option>Media</option>
+    <option>Baja</option>
+  </select>
+  <br><br>
+
+  <select formControlName="estado">
+    <option value="">Seleccione estado</option>
+    <option>Pendiente</option>
+    <option>Completada</option>
+  </select>
+  <br><br>
+
+  <button type="submit" [disabled]="formulario.invalid">
+    Guardar
+  </button>
+
+</form>
