@@ -1,3 +1,5 @@
+// Oscar Dominguez
+
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RegistroTarea } from './registro-tarea';
 import { HttpClientTestingModule } from '@angular/common/http/testing';

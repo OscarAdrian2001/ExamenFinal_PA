@@ -1,3 +1,5 @@
+
+// Oscar Dominguez
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegistroTarea } from './components/registro-tarea/registro-tarea';
